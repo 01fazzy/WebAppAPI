@@ -23,7 +23,7 @@ app.post("/WebAppAPI", async (reqCall, resCall) => {
   console.log('WebAppAPI : ' + WebAppAPI);
   var options = {
     'method': 'GET',
-    'url': 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/authorize?response_type=code&client_id=owvl4axdrghyuap2f04bhjz2&redirect_uri=https://marketing-cloud-querybuilder.herokuapp.com/'
+    'url': 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/authorize?response_type=code&client_id=owvl4axdrghyuap2f04bhjz2&redirect_uri=https://move-assets-between-two-bu.herokuapp.com/'
   };
   request(options, function (error, response) {
     if (error) throw new Error(error);
