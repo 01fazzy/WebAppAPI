@@ -36,17 +36,11 @@
 		href="https://cdnjs.cloudflare.com/ajax/libs/design-system/2.13.7/styles/salesforce-lightning-design-system_touch.min.css"
 		integrity="sha512-5j2QXzkr/ZIuvsLKYgRr8HEfAx5D+Mg0dFDCSGwKR2GKcdZbJSynKdirYGVGRVWLz9ryxV4/0kfoCGffJD3fQw=="
 		crossorigin="anonymous" />
-
 </head>
 
 <body>
-
-
 	<button class="slds-float_right" onclick="WebAppAPI()">WebAppAPI</button>
-	<div id="WebAppAPI">
-
-	</div>
-
+	<div id="WebAppAPI"></div>
 	<script>
 		function WebAppAPI() {
 			$.ajax
@@ -60,13 +54,12 @@
 						'Content-type': 'application/x-www-form-urlencoded'
 					},
 					success: function (data) {
-						console.log('Page : ' + JSON.stringify(data));
+						console.log('Page : ' + data);
 						document.getElementById('WebAppAPI').innerHTML = data;
 					}
 				})
 		}
 	</script>
-
 </body>
 
 </html>

@@ -27,7 +27,6 @@ app.post("/WebAppAPI", async (reqCall, resCall) => {
   };
   request(options, function (error, response) {
     if (error) throw new Error(error);
-    console.log(response.body);
     resCall.send(response.body);
   });
 })
