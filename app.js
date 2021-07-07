@@ -23,11 +23,16 @@ app.post("/WebAppAPI", async (reqCall, resCall) => {
   console.log('WebAppAPI : ' + WebAppAPI);
   var options = {
     'method': 'GET',
-    'url': 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/authorize?response_type=code&client_id=owvl4axdrghyuap2f04bhjz2&redirect_uri=https://www.heroku.com/v2/token'
+    'url': 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/v2/authorize?response_type=code&client_id=owvl4axdrghyuap2f04bhjz2&redirect_uri=https://www.heroku.com/'
   };
   request(options, function (error, response) {
     if (error) throw new Error(error);
     resCall.send(response.body);
+
+    app.get("/", function (req, res) {
+      res.sendFile(response.body);
+    })
+
   });
 })
 
