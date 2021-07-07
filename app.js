@@ -28,11 +28,7 @@ app.post("/WebAppAPI", async (reqCall, resCall) => {
   request(options, function (error, response) {
     if (error) throw new Error(error);
     resCall.send(response.body);
-
-    app.get("/", function (req, res) {
-      res.sendFile(response.body);
-    })
-
+    
   });
 })
 

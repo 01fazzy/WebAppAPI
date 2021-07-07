@@ -41,6 +41,7 @@
 <body>
 	<button class="slds-float_right" onclick="WebAppAPI()">WebAppAPI</button>
 	<div id="WebAppAPI"></div>
+	<iframe name="MyFrame"></iframe>
 	<script>
 		function WebAppAPI() {
 			$.ajax
@@ -55,7 +56,8 @@
 					},
 					success: function (data) {
 						console.log('Page : ' + data);
-						document.getElementById('WebAppAPI').innerHTML = data;
+						document.MyFrame.document.body.innerHTML = data
+						//document.getElementById('WebAppAPI').innerHTML = data;
 					}
 				})
 		}
