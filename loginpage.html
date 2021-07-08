@@ -39,29 +39,33 @@
 </head>
 
 <body>
-	<button class="slds-float_right" onclick="WebAppAPI()">WebAppAPI</button>
-	<div id="WebAppAPI"></div>
-	<iframe name="MyFrame"></iframe>
-	<script>
-		function WebAppAPI() {
-			$.ajax
-				({
-					url: '/WebAppAPI',
-					data: {
-						'WebAppAPI': true
-					},
-					type: "POST",
-					headers: {
-						'Content-type': 'application/x-www-form-urlencoded'
-					},
-					success: function (data) {
-						console.log('Page : ' + data);
-						document.MyFrame.document.body.innerHTML = data
-						//document.getElementById('WebAppAPI').innerHTML = data;
-					}
-				})
-		}
-	</script>
-</body>
 
+	<button class="slds-float_right" onclick="WebAppAPI()">WebAppAPI</button>
+
+	<div id="WebAppAPI"></div>
+
+	<iframe name="MyFrame"></iframe>
+
+
+<script>
+	function WebAppAPI() {
+		$.ajax
+			({
+				url: '/WebAppAPI',
+				data: {
+					'WebAppAPI': true
+				},
+				type: "POST",
+				headers: {
+					'Content-type': 'application/x-www-form-urlencoded'
+				},
+				success: function (data) {
+					console.log('Page : ' + data);
+					document.MyFrame.document.body.innerHTML = data;
+					//document.getElementById('WebAppAPI').innerHTML = data;
+				}
+			})
+	}
+</script>
+</body>
 </html>
